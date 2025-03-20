@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="MECI: A Multi-Model Motion Capture-Free Event Dataset Featuring Large-scale Challenging Indoor Environments">
+  <meta name="keywords" content="Neural Radiance Field, Mobile Rendering, Accelerating Training, Network Regularization">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MECI: A Multi-Model Motion Capture-Free Event Dataset Featuring Large-scale Challenging Indoor Environments</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">MECI: A Multi-Model Motion Capture-Free Event Dataset Featuring Large-scale Challenging Indoor Environments</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              Yang Chen<sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://cslinzhang.github.io/home/">Lin Zhang<sup>1</sup></a>,</span>
+            <span class="author-block">Yicong Zhou<sup>2</sup></span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup> School of Software Engineering, Tongji University, Shanghai, China </span>
+            <span class="author-block"><sup>2</sup> Department of Computer and Information Science, University of Macau, China </span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <!-- <span class="link-block">
+                <a href="https://arxiv.org/pdf/2011.12948"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2011.12948"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span> -->
+              <!-- Video Link. -->
+              <!-- <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://pan.baidu.com/s/1a1yamPVa-WcxHamau2w-7g"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-download"></i>
+                  </span>
+                  <span>Dataset</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Paper Overview. -->
+    <div class="columns is-centered has-text-centered">
+        <h2 class="title is-3">Overview of Scenes and Trajectories</h2>
+    </div>
+    <!-- <h3><p>
+        Visulaization of the covered scenes and trajetories of our MECI
+    </p></h3> -->
+    <div class="column columns is-centered has-text-centered">
+      <!-- <img src="./static/images/pipeline.png"
+      class="interpolation-image"
+      alt="Interpolate start reference image."/> -->
+      
+      <table border="1" > <!-- border="1" 用来显示边框 -->
+        <tr> <!-- tr 代表表格行 -->
+          <th>No.</th>
+            <th>Catergory</th> <!-- th 代表表头单元格 -->
+            <th>Sequence</th>
+            <th>Scene Illustration</th>
+            <th>Trajectory</th>
+        </tr>
+        <tr>
+            <td style="vertical-align: middle">1</td>
+            <td style="vertical-align: middle">Easy</td> <!-- td 代表数据单元格 -->
+            <td style="vertical-align: middle">monitor</td>
+            <td style="vertical-align: middle"><img src="./static/images/website_traj/1monitor/data.png"
+              class="interpolation-image"
+              alt="Interpolate start reference image."/></td>
+            <td style="vertical-align: middle"><img style="height: 200px; width:200px;" src="./static/images/website_traj/1monitor/traj.png"
+              class="interpolation-image"
+              alt="Interpolate start reference image."/></td>
+        </tr>
+        <tr>
+            <td style="vertical-align: middle">2</td>
+          <td style="vertical-align: middle">Easy</td> <!-- td 代表数据单元格 -->
+          <td style="vertical-align: middle">printer</td>
+          <td style="vertical-align: middle"><img src="./static/images/website_traj/2printer/data.png"
+            class="interpolation-image"
+            alt="Interpolate start reference image."/></td>
+          <td style="vertical-align: middle"><img style="height: 200px; width:200px;" src="./static/images/website_traj/2printer/traj.png"
+            class="interpolation-image"
+            alt="Interpolate start reference image."/></td>
+        </tr>
+        <tr>
+            <td style="vertical-align: middle">3</td>
+          <td style="vertical-align: middle">Easy</td> <!-- td 代表数据单元格 -->
+          <td style="vertical-align: middle">robot</td>
+          <td style="vertical-align: middle"><img src="./static/images/website_traj/3robot/data.png"
+            class="interpolation-image"
+            alt="Interpolate start reference image."/></td>
+          <td style="vertical-align: middle"><img style="height: 200px; width:200px;" src="./static/images/website_traj/3robot/traj.png"
+            class="interpolation-image"
+            alt="Interpolate start reference image."/></td>
+        </tr>
+        <tr>
+            <td style="vertical-align: middle">4</td>
+          <td style="vertical-align: middle">Easy</td> <!-- td 代表数据单元格 -->
+          <td style="vertical-align: middle">whiteboard</td>
+          <td style="vertical-align: middle"><img src="./static/images/website_traj/4whiteboard/data.png"
+            class="interpolation-image"
+            alt="Interpolate start reference image."/></td>
+          <td style="vertical-align: middle"><img style="height: 200px; width:200px;" src="./static/images/website_traj/4whiteboard/traj.png"
+            class="interpolation-image"
+            alt="Interpolate start reference image."/></td>
+        </tr>
+        <tr>
+            <td style="vertical-align: middle">5~6</td>
+          <td style="vertical-align: middle">Easy</td> <!-- td 代表数据单元格 -->
+          <td style="vertical-align: middle">low_cabinet1, low_cabinet2</td>
+          <td style="vertical-align: middle"><img src="./static/images/website_traj/6low_cab2/data.png"
+            class="interpolation-image"
+            alt="Interpolate start reference image."/></td>
+          <td style="vertical-align: middle"><img style="height: 200px; width:350px;" src="./static/images/website_traj/6low_cab2/trajs.png"
+            class="interpolation-image"
+            alt="Interpolate start reference image."/></td>
+        </tr>
+        <tr>
+            <td style="vertical-align: middle">7~9</td>
+          <td style="vertical-align: middle">Easy</td> <!-- td 代表数据单元格 -->
+          <td style="vertical-align: middle">robotic_arm1, robotic_arm2, robotic_arm3</td>
+          <td style="vertical-align: middle"><img src="./static/images/website_traj/7arm1/data.png"
+            class="interpolation-image"
+            alt="Interpolate start reference image."/></td>
+          <td style="vertical-align: middle"><img style="height: 150px; width:900px;" src="./static/images/website_traj/7arm1/trajs.png"
+            class="interpolation-image"
+            alt="Interpolate start reference image."/></td>
+        </tr>
+        <tr>
+            <td style="vertical-align: middle">10</td>
+          <td style="vertical-align: middle">Medium</td> <!-- td 代表数据单元格 -->
+          <td style="vertical-align: middle">chairs_dark</td>
+          <td style="vertical-align: middle"><img src="./static/images/website_traj/10chairs_dark/data.png"
+            class="interpolation-image"
+            alt="Interpolate start reference image."/></td>
+          <td style="vertical-align: middle"><img style="height: 200px; width:200px;" src="./static/images/website_traj/10chairs_dark/traj.png"
+            class="interpolation-image"
+            alt="Interpolate start reference image."/></td>
+        </tr>
+        <tr>
+            <td style="vertical-align: middle">11</td>
+          <td style="vertical-align: middle">Medium</td> <!-- td 代表数据单元格 -->
+          <td style="vertical-align: middle">low_cabinet_dark</td>
+          <td style="vertical-align: middle"><img src="./static/images/website_traj/11low_dark/data.png"
+            class="interpolation-image"
+            alt="Interpolate start reference image."/></td>
+          <td style="vertical-align: middle"><img style="height: 200px; width:200px;" src="./static/images/website_traj/11low_dark/traj.png"
+            class="interpolation-image"
+            alt="Interpolate start reference image."/></td>
+        </tr>
+        <tr>
+            <td style="vertical-align: middle">12~14</td>
+          <td style="vertical-align: middle">Medium</td> <!-- td 代表数据单元格 -->
+          <td style="vertical-align: middle">robot_dark1, robot_dark2, robot_dark3</td>
+          <td style="vertical-align: middle"><img src="./static/images/website_traj/12robot_dark1/data.png"
+            class="interpolation-image"
+            alt="Interpolate start reference image."/></td>
+          <td style="vertical-align: middle"><img style="height: 120px; width:900px;" src="./static/images/website_traj/12robot_dark1/trajs.png"
+            class="interpolation-image"
+            alt="Interpolate start reference image."/></td>
+        </tr>
+        <tr>
+            <td style="vertical-align: middle">15</td>
+          <td style="vertical-align: middle">Medium</td> <!-- td 代表数据单元格 -->
+          <td style="vertical-align: middle">316_long</td>
+          <td style="vertical-align: middle"><img src="./static/images/website_traj/15_316_long/data.png"
+            class="interpolation-image"
+            alt="Interpolate start reference image."/></td>
+          <td style="vertical-align: middle"><img style="height: 200px; width:200px;" src="./static/images/website_traj/15_316_long/traj.png"
+            class="interpolation-image"
+            alt="Interpolate start reference image."/></td>
+        </tr>
+        <tr>
+            <td style="vertical-align: middle">16</td>
+          <td style="vertical-align: middle">Medium</td> <!-- td 代表数据单元格 -->
+          <td style="vertical-align: middle">318_long</td>
+          <td style="vertical-align: middle"><img src="./static/images/website_traj/16_318_long/data.png"
+            class="interpolation-image"
+            alt="Interpolate start reference image."/></td>
+          <td style="vertical-align: middle"><img style="height: 200px; width:200px;" src="./static/images/website_traj/16_318_long/traj.png"
+            class="interpolation-image"
+            alt="Interpolate start reference image."/></td>
+        </tr>
+        <tr>
+            <td style="vertical-align: middle">17</td>
+          <td style="vertical-align: middle">Medium</td> <!-- td 代表数据单元格 -->
+          <td style="vertical-align: middle">corridor_light</td>
+          <td style="vertical-align: middle"><img src="./static/images/website_traj/17corridor_light/data.png"
+            class="interpolation-image"
+            alt="Interpolate start reference image."/></td>
+          <td style="vertical-align: middle"><img style="height: 200px; width:200px;" src="./static/images/website_traj/17corridor_light/traj.png"
+            class="interpolation-image"
+            alt="Interpolate start reference image."/></td>
+        </tr>
+        <tr>
+            <td style="vertical-align: middle">18</td>
+          <td style="vertical-align: middle">Hard</td> <!-- td 代表数据单元格 -->
+          <td style="vertical-align: middle">chairs_darker</td>
+          <td style="vertical-align: middle"><img src="./static/images/website_traj/18chairs_darker/data.png"
+            class="interpolation-image"
+            alt="Interpolate start reference image."/></td>
+          <td style="vertical-align: middle"><img style="height: 200px; width:200px;" src="./static/images/website_traj/18chairs_darker/traj.png"
+            class="interpolation-image"
+            alt="Interpolate start reference image."/></td>
+        </tr>
+        <tr>
+            <td style="vertical-align: middle">19</td>
+          <td style="vertical-align: middle">Hard</td> <!-- td 代表数据单元格 -->
+          <td style="vertical-align: middle">low_cabinet_darker</td>
+          <td style="vertical-align: middle"><img src="./static/images/website_traj/19low_darker/data.png"
+            class="interpolation-image"
+            alt="Interpolate start reference image."/></td>
+          <td style="vertical-align: middle"><img style="height: 200px; width:200px;" src="./static/images/website_traj/19low_darker/traj.png"
+            class="interpolation-image"
+            alt="Interpolate start reference image."/></td>
+        </tr>
+        <tr>
+            <td style="vertical-align: middle">20</td>
+          <td style="vertical-align: middle">Hard</td> <!-- td 代表数据单元格 -->
+          <td style="vertical-align: middle">robot_darker</td>
+          <td style="vertical-align: middle"><img src="./static/images/website_traj/20robot_darker/data.png"
+            class="interpolation-image"
+            alt="Interpolate start reference image."/></td>
+          <td style="vertical-align: middle"><img style="height: 200px; width:200px;" src="./static/images/website_traj/20robot_darker/traj.png"
+            class="interpolation-image"
+            alt="Interpolate start reference image."/></td>
+        </tr>
+        <tr>
+            <td style="vertical-align: middle">21~23</td>
+          <td style="vertical-align: middle">Hard</td> <!-- td 代表数据单元格 -->
+          <td style="vertical-align: middle">316_complex, 316_fast1, 316_fast2</td>
+          <td style="vertical-align: middle"><img src="./static/images/website_traj/21_316_complex/data.png"
+            class="interpolation-image"
+            alt="Interpolate start reference image."/></td>
+          <td style="vertical-align: middle"><img style="height: 120px; width:900px;" src="./static/images/website_traj/21_316_complex/trajs.png"
+            class="interpolation-image"
+            alt="Interpolate start reference image."/></td>
+        </tr>
+        <tr>
+            <td style="vertical-align: middle">24~26</td>
+          <td style="vertical-align: middle">Hard</td> <!-- td 代表数据单元格 -->
+          <td style="vertical-align: middle">318_fast, 318_forward, 318_complex</td>
+          <td style="vertical-align: middle"><img src="./static/images/website_traj/25_318_forward/data.png"
+            class="interpolation-image"
+            alt="Interpolate start reference image."/></td>
+          <td style="vertical-align: middle"><img style="height: 120px; width:900px;" src="./static/images/website_traj/25_318_forward/trajs.png"
+            class="interpolation-image"
+            alt="Interpolate start reference image."/></td>
+        </tr>
+        <tr>
+            <td style="vertical-align: middle">27~28</td>
+          <td style="vertical-align: middle">Hard</td> <!-- td 代表数据单元格 -->
+          <td style="vertical-align: middle">cross_room1, cross_room2</td>
+          <td style="vertical-align: middle"><img src="./static/images/website_traj/27cross_room1/data.png"
+            class="interpolation-image"
+            alt="Interpolate start reference image."/></td>
+          <td style="vertical-align: middle"><img style="height: 180px; width:350px;" src="./static/images/website_traj/27cross_room1/trajs.png"
+            class="interpolation-image"
+            alt="Interpolate start reference image."/></td>
+        </tr>
+        <tr>
+            <td style="vertical-align: middle">29~30</td>
+          <td style="vertical-align: middle">Hard</td> <!-- td 代表数据单元格 -->
+          <td style="vertical-align: middle">corridor_fast, corridor_hdr</td>
+          <td style="vertical-align: middle"><img src="./static/images/website_traj/29corridor_fast/data.png"
+            class="interpolation-image"
+            alt="Interpolate start reference image."/></td>
+          <td style="vertical-align: middle"><img style="height: 180px; width:350px;" src="./static/images/website_traj/29corridor_fast/trajs.png"
+            class="interpolation-image"
+            alt="Interpolate start reference image."/></td>
+        </tr>
+        <tr>
+            <td style="vertical-align: middle">31</td>
+          <td style="vertical-align: middle">Hard</td> <!-- td 代表数据单元格 -->
+          <td style="vertical-align: middle">cross_floor</td>
+          <td style="vertical-align: middle"><img src="./static/images/website_traj/31cross_floor/data.png"
+            class="interpolation-image"
+            alt="Interpolate start reference image."/></td>
+          <td style="vertical-align: middle"><img style="height: 200px; width:200px;" src="./static/images/website_traj/31cross_floor/traj.png"
+            class="interpolation-image"
+            alt="Interpolate start reference image."/></td>
+        </tr>
+        <tr>
+            <td style="vertical-align: middle">32</td>
+          <td style="vertical-align: middle">Hard</td> <!-- td 代表数据单元格 -->
+          <td style="vertical-align: middle">corridor_dynamic</td>
+          <td style="vertical-align: middle"><img src="./static/images/website_traj/32corridor_dynamic/data.png"
+            class="interpolation-image"
+            alt="Interpolate start reference image."/></td>
+          <td style="vertical-align: middle"><img style="height: 200px; width:200px;" src="./static/images/website_traj/32corridor_dynamic/traj.png"
+            class="interpolation-image"
+            alt="Interpolate start reference image."/></td>
+        </tr>
+        <tr>
+            <td style="vertical-align: middle">33</td>
+          <td style="vertical-align: middle">Hard</td> <!-- td 代表数据单元格 -->
+          <td style="vertical-align: middle">corner_dynamic</td>
+          <td style="vertical-align: middle"><img src="./static/images/website_traj/33corner/data.png"
+            class="interpolation-image"
+            alt="Interpolate start reference image."/></td>
+          <td style="vertical-align: middle"><img style="height: 200px; width:200px;" src="./static/images/website_traj/33corner/traj.png"
+            class="interpolation-image"
+            alt="Interpolate start reference image."/></td>
+        </tr>
+        <tr>
+            <td style="vertical-align: middle">34~35</td>
+          <td style="vertical-align: middle">Hard</td> <!-- td 代表数据单元格 -->
+          <td style="vertical-align: middle">stairs_dynamic1, stairs_dynamic2</td>
+          <td style="vertical-align: middle"><img src="./static/images/website_traj/34stairs_dynamic1/data.png"
+            class="interpolation-image"
+            alt="Interpolate start reference image."/></td>
+          <td style="vertical-align: middle"><img style="height: 190px; width:350px;" src="./static/images/website_traj/34stairs_dynamic1/trajs.png"
+            class="interpolation-image"
+            alt="Interpolate start reference image."/></td>
+        </tr>
+        <tr>
+            <td style="vertical-align: middle">36~37</td>
+          <td style="vertical-align: middle">Hard</td> <!-- td 代表数据单元格 -->
+          <td style="vertical-align: middle">stairs_hdr1, stairs_hdr2</td>
+          <td style="vertical-align: middle"><img src="./static/images/website_traj/35stairs_hdr1/data.png"
+            class="interpolation-image"
+            alt="Interpolate start reference image."/></td>
+          <td style="vertical-align: middle"><img style="height: 190px; width:350px;" src="./static/images/website_traj/35stairs_hdr1/trajs.png"
+            class="interpolation-image"
+            alt="Interpolate start reference image."/></td>
+        </tr>
+    </table>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Related Links. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Related Links</h2>
+
+        <div class="content has-text-justified">
+          <!-- <p>
+            The dataset processing can be referred to <a href="https://github.com/lijx10/DeepI2P">DeepI2P</a>.
+          </p> -->
+          <p>
+            We thank the authors of <a href="https://gitlab.com/inivation/dv/dv-ros">dv_ros</a> for their public code for event data capturing, and 
+            <a href="https://github.com/AprilRobotics/apriltag">AprilTag</a>, 
+            <a href="https://github.com/facebookresearch/segment-anything">SAM</a> and
+            <a href="https://github.com/advimman/lama">LaMa</a>
+            for data processing.
+          </p>
+          <!-- <p>To directly download our code in this page, click <a href="ATM-NeRF-main.zip" download>Code of ATM-NeRF</a>.</p> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <div class="content">
+          <p>
+            The template is borrowed from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
